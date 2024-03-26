@@ -41,7 +41,7 @@ def Main():
                 print(":/")
                 time_list.append("gear{} --> {} seconds (this is where you messed up)".format(i,time_result))
                 break
-        print("Hell Yeah you made it")
+        print("FINISH LINE")
         answer_1 = input("wanna see the results? yes/no?\n")
         if answer_1 == "yes":
             for result in time_list:
