@@ -1,9 +1,10 @@
 import time
 import random
-
+import os
 def Main():
     x = True
     while x == True:
+        os.system("clear")
         print("\nget ready!",sep="",end="\r",flush=True)
         time.sleep(1)
         print("3!               ",sep="",end="\r",flush=True)
@@ -15,6 +16,7 @@ def Main():
         print("GO               ",sep="",end="\r",flush=True)
         time.sleep(0.5)
         time_list = []
+        os.system("clear")
         for i in range(1,7):
             random_number = random.randint(1,9)
             max_speed = i*30
@@ -34,12 +36,14 @@ def Main():
             if time_result <= 1.5 and shift == random_number:
                 time_list.append("gear{} --> {} seconds".format(i,time_result))
                 print("LEETTSS GOOO!!")
-                time.sleep(0.3)     
+                time.sleep(0.5) 
+                os.system("clear")    
             else:
                 print("OH NO CRASHING!")
                 time.sleep(1)
                 print(":/")
                 time_list.append("gear{} --> {} seconds (this is where you messed up)".format(i,time_result))
+                os.system("clear")
                 break
         print("FINISH LINE")
         answer_1 = input("wanna see the results? yes/no?\n")
